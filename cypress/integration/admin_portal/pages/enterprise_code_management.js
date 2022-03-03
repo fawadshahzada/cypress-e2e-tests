@@ -104,9 +104,9 @@ class CodeManagementPage {
     return cy.get('.alert-warning .message').invoke('text')
   }
 
-  // getCouponMeta() {
-  //   return cy.get('.text-light~div')
-  // }
+  getCouponMeta() {
+    return cy.get('.text-light~div')
+  }
 }
 
 export default CodeManagementPage

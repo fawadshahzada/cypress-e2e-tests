@@ -21,12 +21,12 @@ class LandingPage {
     return cy.get('.enterprise-list td a')
   }
 
-  // searchEnterprise(enterpriseName) {
-  //   cy.server()
-  //   cy.route(`**search=${enterpriseName}**`).as('results')
-  //   cy.get('input[name="searchfield-input"]').clear().type(`${enterpriseName}{enter}`)
-  //   cy.wait('@results')
-  // }
+  searchEnterprise(enterpriseName) {
+    cy.server()
+    cy.route(`**search=${enterpriseName}**`).as('results')
+    cy.get('input[name="searchfield-input"]').clear().type(`${enterpriseName}{enter}`)
+    cy.wait('@results')
+  }
 
   goToEnterprise(enterpriseName) {
     // Open target enterprise page
